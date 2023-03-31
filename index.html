@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora de Codar 2</title>
+</head>
+
+<body>
+    <script>
+        function Exercicio1() {
+
+            var number = parseInt(prompt("Informe o primeiro número"));
+            var number2 = parseInt(prompt("Informe o segundo número"));
+
+            if (number > number2) {
+                alert("O maior número é " + number);
+            }
+            else {
+                alert("O maior número é " + number2);
+            }
+        }
+
+        function Exercicio2() {
+            var number = parseInt(prompt("Insira um valor "));
+
+            if (number < 0) {
+                alert("Esse valor é negativo");
+            }
+            else if (number == 0) {
+                alert("Esse valor é igual a 0 ");
+            }
+            else {
+                alert("Esse valor é positivo")
+            };
+        }
+
+        function Exercicio3() {
+            var number = parseInt(prompt("Insira um valor "));
+            var number2 = parseInt(prompt("Insira outro valor "));
+            var number3 = parseInt(prompt("Insira mais um valor "));
+
+            if (number > number2 && number > number3) {
+                alert("O Primeiro valor é o maior ");
+            }
+            else if (number2 > number && number2 > number3) {
+                alert("O Segundo valor é o maior ")
+            }
+            else { alert("O terceiro valor é o maior") }
+        }
+
+        function Exercicio4() {
+
+            var number = parseInt(prompt("Insira um valor "));
+            var number2 = parseInt(prompt("Insira outro valor "));
+            var number3 = parseInt(prompt("Insira mais um valor "));
+
+            if (number > number2 && number > number3) {
+                maior = number
+                if (number2 > number3) {
+                    maior2 = number2
+                }
+                else { maior2 = number3 }
+            }
+            else if (number2 > number && number2 > number3) {
+                maior = number2
+                if (number > number3) {
+                    maior2 = number
+                }
+                else { maior2 = number3 }
+            }
+            else {
+                maior = number3
+                if (number2 > number) {
+                    maior2 = number2
+                }
+                else { maior2 = number }
+            }
+            alert(`${maior} + ${maior2} = ${maior + maior2}`);
+        }
+
+        function Exercicio5() {
+            var n1 = parseInt(prompt("Informe o 1° valor"));
+            var n2 = parseInt(prompt("Informe o 2° valor"));
+            var n3 = parseInt(prompt("Informe o 3° valor"));
+            var n4 = parseInt(prompt("Informe o 4° valor"));
+            var n5 = parseInt(prompt("Informe o 5° valor"));
+            var n6 = parseInt(prompt("Informe o 6° valor"));
+            var total = n1 + n2 + n3 + n4 + n5 + n6;
+            var total2 = (n1 + n2 + n3 + n4 + n5 + n6) / 6;
+
+            alert(`x = ${n1} + ${n2} + ${n3} + ${n4} + ${n5} + ${n6} = ${total} + /6 + = ${total2}`);
+        }
+
+        function Exercicio6() {
+
+            var n1 = parseInt(prompt("Informe um valor"));
+            var n2 = parseInt(prompt("Informe outro valor"));
+            var n3 = parseInt(prompt("Informe mais um valor"));
+            var n4 = parseInt(prompt("Informe um valor diferente"));
+
+            if (n1 > n2 && n1 > n3 && n1 > n4) {
+                maior = n1;
+            }
+            else if (n2 > n1 && n2 > n3 && n2 > n4) {
+                maior = n2
+            }
+            else if (n3 > n1 && n3 > n2 && n3 > n4) {
+                maior = n3
+            }
+            else { maior = n4 }
+
+            alert(`O Primeiro número é ${n1} o último número ${n4} e o maior deles ${maior} `);
+        }
+
+        function Exercicio7() {
+            var n1 = parseInt(prompt("Informe o 1° valor"));
+            var n2 = parseInt(prompt("Informe o 2° valor"));
+            var n3 = parseInt(prompt("Informe o 3° valor"));
+            var n4 = parseInt(prompt("Informe o 4° valor"));
+            var n5 = parseInt(prompt("Informe o 5° valor"));
+            var n6 = parseInt(prompt("Informe o 6° valor"));
+
+
+            var limite = n1, n2, n3, n4, n5, n6;
+            var soma = (n1 + n2 + n3 + n4 + n5 + n6);
+
+            if (limite >= 72) {
+                alert(`Valor maior que 72, tente novamente`)
+                Exercicio7();
+            }
+
+            alert(`O valor final da soma é ${soma}, e os número informados são ${n1}, ${n2}, ${n3}, ${n4}, ${n5}, ${n6}`);
+        }
+
+        function Exercicio8() {
+            var n1 = parseInt(prompt("Informe o 1° valor"));
+            var n2 = parseInt(prompt("Informe o 2° valor"));
+            var n3 = parseInt(prompt("Informe o 3° valor"));
+            var n4 = parseInt(prompt("Informe o 4° valor"));
+
+            valor = n1, n2, n3, n4;
+            soma = n1 + n2 + n3 + n4;
+            media = soma / 4;
+
+
+            if (valor < 0 || valor > 10) {
+                alert(`Informe um valor que seja maior que 0 e menor que 10`)
+                Exercicio8();
+            }
+            else {
+                alert(media);
+                if (media > 5) {
+                    alert(`Você passou no teste`);
+                }
+                else {
+                    alert(`Tente novamente`);
+                }
+            }
+        }
+
+        function Exercicio9() {
+
+            const anoNascimento = prompt("Digite o ano do seu nascimento: ");
+            const anoAtual = new Date().getFullYear();
+            const idade = anoAtual - anoNascimento;
+
+            if (idade >= 18) {
+                alert(`Você pode votar`);
+            }
+            else {
+                alert(`Tente novamente`);
+            }
+        }
+
+        function Exercicio10() {
+
+            var altura = parseFloat(prompt(`Digite sua Altura`));
+            var sexo = parseInt(prompt(`Digite o seu sexo: 1 - Feminino, 2 - Masculino`));
+            let pesoIdeal;
+
+            if (sexo === 1) {
+                pesoIdeal = (62.1 * altura) - 44.7;
+            }
+            else if (sexo === 2) {
+                pesoIdeal = (72.7 * altura) - 58;
+            }
+            else {
+                alert(`sexo invalido`);
+            }
+            if (pesoIdeal) {
+                window.alert(`Seu peso ideal é: ${pesoIdeal}kg `);
+            }
+        }
+
+        function Exercicio11() {
+            var valor1 = parseInt(prompt(`Digite o Primeiro valor: `));
+            var valor2 = parseInt(prompt(`Digite o Segundo valor: `));
+            let resultado;
+            var operacao = parseInt(prompt(`Digite o codigo da operação desejada: \n 1 - adição, \n 2 - Subtração, \n 3 - Divisão, \n 4 - Multiplicação`));
+
+            switch (operacao) {
+                case 1:
+                    resultado = valor1 + valor2;
+                    break;
+                case 2:
+                    resultado = valor1 - valor2;
+                    break;
+                case 3: 
+                    resultado = valor1 / valor2;
+                    break;
+                case 4: 
+                    resultado = valor1 * valor2;
+                    break;
+                    default: alert(`Operação invalida`)                    
+            }
+
+            alert(`O resultado da operação é: ${resultado}`)
+        }
+    </script>
+
+    <button onclick="Exercicio1()">Exercício 1</button>
+    <button onclick="Exercicio2()">Exercicio 2</button>
+    <button onclick="Exercicio3()">Exercicio 3</button>
+    <button onclick="Exercicio4()">Exercicio 4</button>
+    <button onclick="Exercicio5()">Exercicio 5</button>
+    <button onclick="Exercicio6()">Exercício 6</button>
+    <button onclick="Exercicio7()">Exercício 7</button>
+    <button onclick="Exercicio8()">Exercício 8</button>
+    <button onclick="Exercicio9()">Exercício 9</button>
+    <button onclick="Exercicio10()">Exercício 10</button>
+    <button onclick="Exercicio11()">Exercício 11</button>
+</body>
+
+</html>
